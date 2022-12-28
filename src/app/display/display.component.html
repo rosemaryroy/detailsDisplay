@@ -1,0 +1,31 @@
+<div class="container title mt-4">
+    <div class="row">
+        <div class="col">
+            <h1>Details Display</h1>
+            <!-- table to dislay -->
+            <table class="table align-middle" >
+                <thead>
+                  <tr class="align-bottom">
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Mobile</th>
+                    <th scope="col">Age</th>
+                    <th scope="col">Photo</th>
+                    <th scope="col">Address</th>
+                  </tr>
+                </thead>
+                <tbody *ngFor="let user of userList">
+                  <tr>
+                 <td >{{user.firstName}}</td> 
+                    <td>{{user.email}}</td>
+                    <td>{{user.phone}}</td>
+                    <td>{{user.age}}</td>
+                    <td><img [src]="user.image" alt="no"></td>
+                    <td>{{user.address.address}}</td>
+                  </tr>
+                </tbody>
+            </table>
+            
+        </div>
+    </div>
+</div>
